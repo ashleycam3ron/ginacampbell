@@ -19,7 +19,7 @@
 			  </div>
 			<?php endif; ?>
 
-			<div class="col-md-5">
+			<div class="col-md-5" style="padding-top:5%;">
 				<?php the_excerpt(); ?>
 			</div>
 		</div>
@@ -31,13 +31,13 @@
 		    <img src="<? echo get_stylesheet_directory_uri(); ?>/images/icon-chair.png" alt="chair icon"/>
 		    <h3>New to therapy?</h3>
 		    <p>Lorem ipsum dolor sit amet, quas vocent lucilius mei at. Corpora platonem his cu, ei erat scripta aperiam est. Appareat accusamus mel an, ei eirmod ocurreret his. Mazim tollit ocurreret ea cum, vis ne ferri molestie percipit, pro no explicari definiebas.</p>
-		    <p><a class="btn-default">Learn more</a>		 </p>
+		    <p><a class="btn-default">Learn more</a></p>
 		</div>
 		<div class="col-md-4">
 		    <img src="<? echo get_stylesheet_directory_uri(); ?>/images/icon-chat.png" alt="let's talk icon"/>
 		    <h3>Let's Talk</h3>
 		    <p>Lorem ipsum dolor sit amet, quas vocent lucilius mei at. Corpora platonem his cu, ei erat scripta aperiam est. Appareat accusamus mel an, ei eirmod ocurreret his. Mazim tollit ocurreret ea cum, vis ne ferri molestie percipit, pro no explicari definiebas.</p>
-		    <p><a class="btn-default">Connect</a>			 </p>
+		    <p><a class="btn-default">Connect</a></p>
 		</div>
 		<div class="col-md-4">
 		    <img src="<? echo get_stylesheet_directory_uri(); ?>/images/icon-cal.png" alt="calendar icon"/>

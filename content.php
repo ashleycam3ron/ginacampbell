@@ -4,7 +4,7 @@
 	$big = 999999999; // need an unlikely integer
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$args = array(
-		'posts_per_page' => 1,
+		'posts_per_page' => 4,
 		'paged' => $paged,
 		'orderby' => 'date',
 		'order' => 'DESC' );
@@ -22,7 +22,7 @@
 
 		  <div class="col-md-8">
 			<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h1>
-			<time><?php the_time('l, F m'); ?> at <?php the_time('g:ia'); ?></time>
+			<time><?php the_time('l, F m'); ?> <!-- at --> <?php //the_time('g:ia'); ?></time>
 			<?php the_excerpt();?>
 		  </div>
 	</article>

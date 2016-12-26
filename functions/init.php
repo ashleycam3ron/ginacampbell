@@ -26,13 +26,15 @@ add_action('admin_head', 'add_favicon');
 
 //customize login screen
 function custom_login_logo(){
-	$logo = get_stylesheet_directory_uri().'/images/Gina-Campbell-Counseling-logo.png';
+	$logo = get_stylesheet_directory_uri().'/images/Gina-Campbell-Counseling-logo-1.png';
 	$images = get_stylesheet_directory_uri().'/images/';
 	//$l = getimagesize($path);
 	echo '<style type="text/css">
-			h1 a { background-image:url("'. $logo .'") !important; background-size:100% !important;width:320px !important;height: 151px !important;margin: 0 auto !important;}
+			h1 a { background-image:url("'. $logo .'") !important; background-size:100% !important;width:258px !important;height: 92px !important;margin: 0 auto !important;}
 			body.login {background:url("'. $images .'pattern.png") !important;}
-			.login #backtoblog a, .login #nav a, .login h1 a {color: #252121;font-weight: bold;}
+			.login #backtoblog a, .login #nav a, .login h1 a {color: #8d82b1;}
+			input#wp-submit{background:#8d82b1; color:white;border:0;box-shadow:none;text-shadow:none;}
+			.login form {box-shadow: none; border: 1px solid #d4cee6; border-radius: 4px; }
 		</style>';
 }
 add_action('login_head','custom_login_logo');
