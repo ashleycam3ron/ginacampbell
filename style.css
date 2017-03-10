@@ -44,10 +44,10 @@ Text Domain: 	ashleycameron
 	::-moz-selection{background:#ddd;color:#777;}
 
 /* !Placeholders */
-	::-webkit-input-placeholder {color: #c0cad6;}
-	:-moz-placeholder { /* Firefox 18- */color: #c0cad6;  }
-	::-moz-placeholder {  /* Firefox 19+ */color: #c0cad6;  }
-	:-ms-input-placeholder {  color: #c0cad6;  }
+	::-webkit-input-placeholder {color: #bda8c1;}
+	:-moz-placeholder {			 color: #bda8c1;  }
+	::-moz-placeholder {		 color: #bda8c1;  }
+	:-ms-input-placeholder {	 color: #bda8c1;  }
 
 /* !Hide */
 	nav > h2,
@@ -58,30 +58,46 @@ Text Domain: 	ashleycameron
 
 /* !01 Structure */
 	* 	 {margin: 0;padding: 0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
-	body {font-family: 'Questrial',Helvetica, Arial, sans-serif;font-family: 'Heebo',Helvetica, Arial, sans-serif;
-/* font-family: 'Muli',Helvetica, Arial, sans-serif; */font-size:15px;color:#757d89;}
+	body {font-family: 'Questrial',Helvetica, Arial, sans-serif;font-size:17.5px;color:#757d89;}
 	.entry {padding-bottom: 5%;}
 	.inverse{background: black;color: white;padding-top:1.5%;padding-bottom: 2%;}
 	.clear{clear: both;}
-	#intro{background: #f7f7f8;padding: 15px 0;}
-	.entry ul{list-style-image: url(images/li.png);margin-left: 15px;}
-	.entry li{list-style-position: inside;color: #535c6b;}
+	#intro{background: url(images/intro.png) repeat #f7f7f8;padding: 15px 0;}
+	#intro h3{color: #6a647d;margin-top: 22px;}
+	.home .intro{border-right: 1px solid #c9c2e0;margin-top: 10px;padding-right: 30px;}
+	.entry ol li{list-style-position: hanging;margin: 0 5% 15px;}
+	ol {list-style: none; counter-reset: li}
+	ol li {counter-increment: li}
+	.entry ul{list-style:none;margin-left: 15px;}
+	.entry ul li{list-style-position: inside;color: #535c6b;background: url(images/li.png) no-repeat left 9px;line-height: 1.25;    padding: 0 0 5px 15px;}
+	.entry ol li::before {content: counter(li); color: #8d82b1;
+    display: inline-block; width: 1em; margin-left: -1.5em;
+    margin-right: 0.5em; text-align: right; direction: rtl}
+    .entry form li{background: transparent;}
 
 /* !02 Typography */
 	h1{color: #bda8c1;font-size: 24px;font-family: 'Futura',Helvetica, Arial, sans-serif;letter-spacing: .02em;margin-bottom: 40px;}
-	h2{font-size: 17px;color: #7c7399;}
-	h2{font-size: 24px;color: #8d82b1;}
+/* 	h1,h2,h3,h4,h5,h6{font-family:'Futura',Helvetica, Arial, sans-serif;} */
+	.title h1{margin-bottom: 0px;display: inline-block;}
+	.blog .title h1,
+	.archive .title h1{margin-bottom: 0px;}
+	header.title{border-bottom: 1px solid #ccc;padding: 0 0 18px;margin-bottom: 4%;}
+	h2{font-size: 30px;color: #8d82b1;}
+	.entry h2{margin-top: 40px;}
 	h3{font-size: 24px;color: #908aa5;}
-	h3{font-size: 18px;color: #c4adca;line-height: 1.3;}
-	h4{font-size: 18px;}
+	h3{font-size: 20px;color: #c4adca;color:#a18ea7;line-height: 1.3;}
+	.entry h3{font-size: 22px;}
+	h4{font-size: 21px;color: #535c6b;}
 	h5{font-size: 16px;}
 	h6{font-size: 14px;}
 	p {margin: 0 0 14px;}
+	p.intro{color: #8d82b1;font-size: 112%;}
 	blockquote	{}
-	li {list-style-position: inside;}
+	b,strong{color: #333;}
+	small{font-size: 75%;}
 
 /* !03 Links */
-	a{cursor: pointer;color:#ffb094;text-decoration: none;cursor: pointer;
+	a{cursor: pointer;color:#fd8d65;text-decoration: none;cursor: pointer;
 	-webkit-transition: all 0.2s;
        -moz-transition: all 0.2s;
          -o-transition: all 0.2s;
@@ -95,20 +111,21 @@ Text Domain: 	ashleycameron
 
 
 /* !04 Buttons */
-	.btn-default {border: 1px solid #ffb094;border-radius: 4px;padding:9px 20px 7px;color: #ffb094;font-size: 90%;letter-spacing: .05em;}
+	.btn-default {border: 1px solid #ffb094;border-radius: 4px;padding:9px 20px 7px;color: #fd8d65;font-size: 90%;letter-spacing: .05em;    display: inline-block;}
 	.btn-default.active,
 	.btn-default.focus,
 	.btn-default:active,
 	.btn-default:focus,
 	.btn-default:hover,
-	.open>.dropdown-toggle.btn-default { color: #FF7472; background-color: rgba(0, 0, 0, 0); border-color: #FF7472; }
+	.open>.dropdown-toggle.btn-default {color: #FFF;
+    background-color: #FF7472;
+    border-color: #FF7472;}
 	.appt {
     padding-left: 40px;
     background: url(images/icon-cal2.png) no-repeat 9px center;
 }
-	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: #FF942A;}
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: #ea7a53;}
 	.navbar-toggle {border: none;}
-	.navbar-toggle:hover { background: transparent!important }
 	.navbar-toggle .icon-bar { width: 22px; transition: all .2s }
 	.navbar-toggle .top-bar { transform: rotate(45deg); transform-origin: 10% 10% }
 	.navbar-toggle .middle-bar { opacity: 0 }
@@ -123,9 +140,7 @@ Text Domain: 	ashleycameron
 	.featured img.attachment-medium,.featured img.attachment-medium:hover,
 	.menu li img,.menu li:hover img,
 	.gallery li img,
-	.gallery li:hover img,
-	.flexslider .slides li img,
-	.flexslider .slides li:hover img {
+	.gallery li:hover img {
 		-webkit-transition:all .3s ease-in-out;
 		-moz-transition:all .3s ease-in-out;
 		-ms-transitiog n:all .3s ease-in-out;
@@ -135,8 +150,20 @@ Text Domain: 	ashleycameron
 
 /* !07 Forms */
 	form.wpcf7-form p{padding:0;line-height: 13px;}
+	#gform_wrapper_1 {margin-top: 0;}
+	#gform_wrapper_1 input,
+	#gform_wrapper_1 textarea{border:0;border-bottom: 2px solid #c4adca;padding: 10px 13px 8px;}
+	#gform_wrapper_1 input:focus,
+	#gform_wrapper_1 textarea:focus{border-color: #ffc7b7;}
+	#gform_wrapper_1 label{display: none;}
 	input:focus, textarea:focus{outline: none;}
 	textarea{max-width: 100%;max-height: 150px;}
+	input#gform_submit_button_1 { background: #8d82b1; color: #fff; border: 0; border-radius: 4px; padding:11px 40px;letter-spacing: .02em; }
+	input#gform_submit_button_1:hover{background: #ffc7b7}
+	#gform_1 .gform_footer {padding: 0;text-align: center;}
+	@media (min-width: 641px) {
+		#gform_wrapper_1 li.gfield {padding-right: 0px;}
+	}
 
 	/* !Gravity Forms Validation */
 		.gform_confirmation_message{
@@ -150,7 +177,7 @@ Text Domain: 	ashleycameron
 			background:rgba(0,0,0,0) !important;border:0 !important;margin:0!important;}
 		.gform_wrapper #gform_fields_1 .validation_message,
 		.gform_wrapper #gform_fields_2 .validation_message{
-			color: #ED1C24 !important;padding:0 !important;}
+			color: #ED1C24 !important;padding:0 !important;font-size: 12px;}
 		.gform_wrapper li.gfield_error input[type=text],
 		.gform_wrapper li.gfield_error input[type=url],
 		.gform_wrapper li.gfield_error input[type=email],
@@ -168,17 +195,18 @@ Text Domain: 	ashleycameron
 	.navbar-brand {width: 326px;height: 47px;padding: 0;margin: 39px auto;}
 	#site-description{width: 39%;float: right;padding: 4px 30% 0 0;font-size: 13px;font-style:italic;line-height:15px;color:#DDD;}
 	#banner{box-shadow: 0 0 16px #434148 inset;}
-	a.portal { background: #ffb094; color: #fff; padding: 5px 18px; font-size: 13.5px; border-radius: 0 0 4px 4px; letter-spacing: .05em; position: absolute; right: 0;z-index: 2; }
-	a.phone{color:#bdadc3;font-size: 20px;padding-right: 15px;}
+	.single #banner{margin-bottom: 4%;}
+	a.portal { background: #fd8d65; color: #fff; padding: 5px 18px; font-size: 13.5px; border-radius: 0 0 4px 4px; letter-spacing: .05em; position: absolute; right: 0;z-index: 2; }
+	a.phone{color:#bdadc3;font-size: 28px;line-height:.9;padding-right: 15px;}
 
 
 /* !Navigation  */
 	.navbar-default .navbar-collapse {border: 0; background-color: #FFF; }
-	.navbar-default .navbar-nav>li>a { color: #888; text-transform: uppercase; letter-spacing: .2em; font-size: 13.5px; border-top: 4px solid white; } .menu {list-style: none;}
+	.navbar-default .navbar-nav>li>a { color: #888; text-transform: uppercase; letter-spacing: .1em; font-size: 17px; border-top: 4px solid white; } .menu {list-style: none;}
 	.navbar-default {  margin-bottom: 0;background-color: rgba(0, 0, 0, 0);border: 0;display: inline-block;}
 	.navbar-nav>li {padding: 0 15px;}
 	.nav>li>a{padding: 40px 5px 22px;}
-	.navbar-default .navbar-toggle { border: 0; background-color: #000; border-radius: 0; padding: 15px 12px; margin: 0 0 10px;}
+	.navbar-default .navbar-toggle { border: 0; background-color: #000; border-radius: 0; padding: 16px 12px; margin: 0 0 10px;}
 	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .current-menu-ancestor > a, .navbar-default .navbar-nav>li.current-menu-ancestor>a {color: #ac9db0;background: transparent;border-top: 4px solid #ac9db0;}
 	.dropdown-menu { border-radius: 0; padding: 0; border: 0; box-shadow: none; }
 	.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {background-color:#FF7472;}
@@ -189,23 +217,37 @@ Text Domain: 	ashleycameron
 
 /* !Home */
 	img.profile{border: 8px solid #fff;}
+	.page-template-default img.profile {margin: 10px 30px 15px -15px; }
+	.page-id-35 img.profile {margin: 5px 0 0 10px; }
+	#intro .col-md-5{padding: 3% 30px 0 40px;}
 	.intro p {font-size: 18px;line-height: 1.5;}
-	.intro h2{color: #8d82b1;margin-top: 60px;}
+	.intro h2{color: #8d82b1;}
 	.cta div {padding: 33px 5% 40px;}
 	.cta h3 {font-size: 24px;letter-spacing: .03em;}
-	.cta p{color: #908aa5;}
+	.cta p{color: #908aa5;    color: #9a9a9a;}
 
+	#map h2{    position: absolute;
+    font-size: 17px;
+    background: #fff;
+    padding: 30px 25px 30px 70px;
+    box-shadow: 0 0 8px #ccc;
+    border-right: 20px solid #c4adca;
+    margin-top: 3%;}
+    #map a {
+	    padding: 0 0 0 25px;
+	    background: url(images/pin.png) no-repeat left center;
+	        background-size: contain;color: #877fa6;}
 
 /* !Searchbar */
 	.search-form {position: relative;}
 	.search-form label{display: block;}
 	.search-field {border:1px solid #bbbaba;border-radius: 20em;padding:7px 17px 5px;width: 100%;}
-	.search-field:focus {outline: none;}
+	.search-field:focus {outline: none;border-color: rgba(190, 169, 194, 0.8);}
 	.search-field:focus i {color:#3A4556; }
-	.search-field::-webkit-input-placeholder { color:#ccc; }
-	.search-field:-moz-placeholder 			 { color:#ccc; }
-	.search-field::-moz-placeholder 		 { color:#ccc; }
-	.search-field:-ms-input-placeholder 	 { color:#ccc; }
+	.search-field::-webkit-input-placeholder { color:#bda8c1; }
+	.search-field:-moz-placeholder 			 { color:#bda8c1; }
+	.search-field::-moz-placeholder 		 { color:#bda8c1; }
+	.search-field:-ms-input-placeholder 	 { color:#bda8c1; }
 	input[type="search"] {-webkit-appearance:textfield;}
 	.search-submit {position: absolute; right: 10px; top: 8px; border: 0;background:transparent;}
 	.search-submit:hover{opacity:.7;cursor:pointer;}
@@ -216,6 +258,7 @@ Text Domain: 	ashleycameron
 /* !Sidebar */
 	#sidebar { font-size: 13.5px; color: #8b95a5; padding-bottom: 22px; }
 	#sidebar h2 { font-size: 18px; color: #535c6b; border-bottom: 1px solid #ccc; padding: 8px 0;}
+	#sidebar li:first-of-type h2 {margin: 0; padding-top: 0; }
 	#sidebar > li, #sidebar ul{list-style: none;}
 	#sidebar h6 { color: #8d82b1; font-size: 16px; font-family: "Futura"; line-height: 1.3; margin: 11px 0 4px; }
 	#sidebar p { margin: 0 0 7px; }
@@ -225,12 +268,29 @@ Text Domain: 	ashleycameron
 
 /* !Blog */
 	.blog .entry,
-	.single .entry { padding-bottom: 17px; border-bottom: 1px solid #ddd; margin-bottom: 30px; }
-	.blog .entry h1{font-size: 18px;margin: 0px auto 10px; line-height: 1;}
+	.single .entry,
+	.archive .entry { padding-bottom: 17px; border-bottom: 1px solid #ddd; margin-bottom: 30px; }
+	.blog .entry h1,
+	.archive .entry h1{margin: 0px auto 10px; line-height: 1;}
 	h1 a{color: #bda8c1;}
-	.blog .entry > div:first-of-type {
-    padding-left: 0;
-}
+	.blog .col-md-9 {padding-right: 40px;}
+	.blog .col-md-7{font-size:96%}
+	.blog .entry > div:first-of-type,
+	.archive .entry > div:first-of-type {padding-left: 0;}
+	.wp-post-image{float: right;margin: 0 0 10px 20px;border-radius: 5px;    max-width: 100%;
+    height: auto;}
+	#pagination nav > h2 {
+	    display: block;
+	    font-size: 20px;
+	    color: #555;
+	    text-align: center;
+	    clip: initial;
+    overflow: visible;
+    height: auto;
+    width: auto;
+    position: relative !important;
+	}
+
 /* 	#text-3 h2 {margin-top: 0;padding-top: 0;} */
 /* 	.blog #sidebar #text-3 h2 {margin-top:0;} */
 	#text-3 img { margin: 2px 12px 3px -3px; }
@@ -241,10 +301,46 @@ Text Domain: 	ashleycameron
 	.widget_categories ul { margin-left: 13px; }
 	.widget_categories a {color: #8d82b1;font-size: 16px;}
 	#search-2 {margin-top:-3px;}
+	#pagination {
+    margin-bottom: 5%;
+}
+
+/* !Subscribe */
+#subscribe *{color: white;}
+#subscribe {
+	background: #fdbe32;
+	padding: 30px;
+	text-align: center;
+}
+#subscribe h3 {
+	font-size: 24px;
+	color: #bb694b;
+	margin: -20px auto 13px;
+	position: relative;
+	width: auto;
+	display: inline-block;
+	padding: 0 15px;
+}
+#subscribe label{display: none;}
+#subscribe form{margin-bottom: 8px;}
+#subscribe .button {
+	background: #fd8d65;
+	border: 0;
+	padding:9px 20px 6px;
+	border-radius: 0 4px 4px 0;font-size:.9em;    margin: 0 0 0 -5px;
+}
+#subscribe #mce-EMAIL{
+    padding: 9px 20px 6px;
+    border: 0;
+    border-radius: 4px 0 0 4px;
+    color: #7b7b7b;
+    font-size: .9em;
+}
 
 
 /* !Quote */
-	#quote{background:#fdbba3;color: white;padding: 40px 0 20px;font-size: 110%;letter-spacing: .02em;}
+	#quote,
+	#subscribe{background:#fdbba3;color: white;padding: 40px 0 20px;font-size: 110%;letter-spacing: .02em;}
 	#quote .author{font-style:italic;color: #e17d59;font-size:12.5px;}
 
 /* !Pagination */
@@ -260,8 +356,12 @@ Text Domain: 	ashleycameron
 	.pagination>li:first-child>a, .pagination>li:first-child>span,
 	.pagination>li:last-child>a, .pagination>li:last-child>span{border-radius: 20em;border: 0;}
 	.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{ cursor:pointer;color: #FF7472; background-color: rgba(0, 0, 0, 0);}
-	.prev a{padding-left:21px;background: url(images/arrowL.png) no-repeat left center;}
-	.next a{padding-right:21px;background: url(images/arrowR.png) no-repeat right center;}
+	.prev a,
+	.nav-previous a{padding-left:21px;background: url(images/arrowL.png) no-repeat left center;}
+	.nav-previous{float: left;}
+	.next a,
+	.nav-next a{padding-right:21px;background: url(images/arrowR.png) no-repeat right center;}
+	.nav-next {float: right;}
 
 /* !Comments */
 	#comments label{display: block;}
@@ -281,9 +381,21 @@ Text Domain: 	ashleycameron
 	.social li.google a		{background-position:-104px 0;}
 	.social li.yelp a		{background-position:-139px 0;}
 
+/* !Resources */
+	.page-id-86 .entry a {display: inline-block;vertical-align: top;}
+	.page-id-86 img {height: auto;margin: 5px 20px 10px 0;}
+
+/* !Contact */
+#gform_1 {
+    background: rgba(141, 130, 177, 0.3);
+    border-radius: 4px;
+    padding: 5% 10%;
+}
+
+
 /* !Footer  */
 	.copyright { padding: 9px 0 0; font-size: 11px; margin-bottom: 0; clear: both;}
-	#footer{border-top: 8px solid #eee6f0;padding: 15px 15px 20px;font-family: 'Futura';background: #f6f3f8;color:#736978;}
+	#footer{border-top: 8px solid #e0d7e2;padding: 15px 15px 20px;font-family: 'Futura';background: #f6f3f8;color:#736978;background: url(images/footer.png) repeat}
 	#footer a {color: #b797c1;}
 	#footer address {margin: 12px auto 4px;}
 
@@ -295,18 +407,19 @@ Text Domain: 	ashleycameron
 @media (min-width: 768px) and (max-width: 961px){
 }
 @media (max-width: 768px) {
-	.navbar-default .navbar-collapse{padding: 0;}
+
 	.navbar-nav .open .dropdown-menu{text-align: center;}
 	.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
 	.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,
 	.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {color: #FFF; background-color: #000; }
 
 	.navbar-default .navbar-toggle {
-    border: 0;
-    background-color: #000;
+ border-left: 1px solid #ffb69c;
+    background-color: #fd8d65;
     top: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
+    z-index: 3;
 }
 a.portal {
     padding: 9px 18px;
@@ -320,22 +433,116 @@ a.portal {
     width: 150px;
     text-align: center;
     display: block;
-
+}
 
 }
 @media (max-width: 400px) {
+body{font-size: 15px;}
+#header {
+    padding: 0;
+}
+a.portal {
+    padding: 12px 46px 12px 18px;
+    font-size: 16px;
+    border-radius: 0;
+    top: 0;
+    width: 100%;
+    bottom: auto;
+    position: fixed;}
+a.phone {
+    font-size: 24px;
+    line-height: .9;
+    padding: 3px 0 10px;
+    float: none !important;
+    display: block;
+    text-align: center;
+}
 
-	.navbar-brand {
+.page-template-default img.profile {
+    margin: 10px 0px 0 -15px;    max-width: 150px;}
+.page-template-default .entry img.profile {
+    margin: -10px -15px 0 0px;
+}
+    #intro .col-xs-6{padding-right: 0;}
+    .home .intro {
+    border-right: 0;
+    margin-top: 10px;
+    padding: 0 10px 0 30px;
+    }
+ #intro .col-md-5{padding: 0px 10px 0 30px;}
+.navbar-brand {
     width: 85%;
     height: auto;
     margin: 0 auto;
     float: none;
     display: block;
+    padding: 60px 0 11px;
 }
-
-
-	.navbar-default { padding-top: 15px; }
+.navbar-default .navbar-collapse{    position: fixed;
+    width: 100%;
+    z-index: 2;}
+.navbar-nav {
+    margin: 31px -15px 0;
+}
+.navbar-nav>li {
+    padding: 0;
+}
+.navbar-default .navbar-nav>li>a {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 16px;
+    background: #ff9c78;
+    color: #fff;
+    padding: 11.5px 25px 10.5px 37px;
+    line-height: 1.5;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.cta div {
+    padding: 23px 5% 0px;
+}
+.title h1 {
+    padding-left: 10px;
+    font-size: 22px;
+}
+.blog .feature{padding: 0;}
+.entry h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+	.navbar-default { padding-top: 15px;width: 100%;position: absolute;}
 	.navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
-    #banner {height: 150px;}
+    #banner {height: 180px;}
     .gallery{padding: 0;}
+
+.page-id-86 .entry img.alignleft {
+    margin: 5px 10px 8px 0;
+    max-width: 125px;
+}
+.blog .entry h1,
+.archive .entry h1{margin-top: 10px;font-size: 22px;}
+.blog .entry, .single .entry, .archive .entry {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.blog .col-md-9 {
+    padding-right: 15px;
+}
+.single h1{    margin-bottom: 15px;}
+.wp-post-image {
+    margin-bottom: 20px;
+}
+#subscribe h3 {
+    font-size: 20px;margin-bottom: 6px;}
+#subscribe p {    font-size: 15px;}
+    #footer{padding: 15px 30px 20px;}
+    #form{    padding: 0;}
+    #gform_wrapper_1 input, #gform_wrapper_1 textarea {
+    padding: 6px 13px 4px;
+}
+body .gform_wrapper ul li.gfield {
+    margin-top: 9px;}
+
 }

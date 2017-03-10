@@ -1,12 +1,3 @@
-// sticky menu
-/*
-jQuery(document).ready(function() {
-    if(window.matchMedia('(min-width: 768px)').matches) {
-        jQuery(".sticky").sticky({topSpacing:0});
-    }
-});
-*/
-
 jQuery(".fancybox, .gallery a").fancybox({
 	padding: 0,
 	helpers:  {

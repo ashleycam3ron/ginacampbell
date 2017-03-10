@@ -1,27 +1,46 @@
-<?php get_header(); ?>
+<?php get_header();?>
+<?php get_template_part('/template-parts/banner'); ?>
+	<section class="container-fluid">
+<header class="row title">
+	<div class="container"><h1><?php single_cat_title('Category: '); ?></h1></div>
+</header>
+<div class="container">
+	<div class="col-md-8">
+	<?php
+		if ( have_posts() ) : ?>
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post(); ?>
 
-<div id="archive">
-	<div class="container equal">
-
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<article class="col-sm-3 text-center col" id="post-<?php the_ID(); ?>">
-		<div <?php post_class() ?>>
-			<?php if ( has_post_thumbnail() ) { ?>
-		     	 <?php the_post_thumbnail('medium', array( 'class' => 'img-responsive'));?>
-			 <?php } else { ?>
-					<img class="img-responsive img-circle" src="http://placehold.it/250x250">
-			 <?php } ?>
-			<h2><?php the_title(); ?></h2>
-			<span><?php echo implode(', ', get_field('ingredients2')); ?></span>
-			<p class="price"><?php the_field('price'); ?></p>
-			<?php //the_content(); ?>
-		</div>
-	</article>
+		<article class="entry row">
+			<?php if ( is_home() && has_post_thumbnail() ) { ?>
+			  <div class="col-md-5 feature">
+			    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+			        <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
+			    </a>
+			    <div class="clear"></div>
+			  </div>
+			  <div class="col-md-7">
+				<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h1>
+				<time><?php the_time('l, F m'); ?></time>
+				<?php the_excerpt();?>
+			  </div>
+			<?php } else { ?>
+			  <div class="col-md-12">
+				<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h1>
+				<time><?php the_time('l, F m'); ?></time>
+				<?php the_excerpt();?>
+			  </div>
+			<?php } ?>
+		</article>
 
 	<?php endwhile; ?>
-	<?php else : ?>
-		<h2>Not Found</h2>
 	<?php endif; ?>
+
+	<?php if (function_exists("wp_bs_pagination")){  wp_bs_pagination(); } ?>
 	</div>
+
+	<?php get_sidebar('blog');?>
 </div>
-<?php get_footer(); ?>
+	</section>
+<?php get_footer();?>

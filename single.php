@@ -6,6 +6,7 @@
 		<?php while(have_posts()) : the_post();?>
 			<article class="entry">
 				<h1><?php the_title();?></h1>
+				<?php the_post_thumbnail('medium'); ?>
 				<?php the_content();?>
 			</article>
 
@@ -15,8 +16,9 @@
 					<span class="nav-title prev">%title</span>',
 					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'ashleycameron' ) . '</span><span class="nav-title next">%title</span>',
 				)); ?>
+				<div class="clear"></div>
 			</div>
-			<?php if ( comments_open() || get_comments_number() ) : comments_template(); endif; ?>
+			<?php //if ( comments_open() || get_comments_number() ) : comments_template(); endif; ?>
 		<?php endwhile;?>
 		</div>
 		<?php get_sidebar('blog'); ?>

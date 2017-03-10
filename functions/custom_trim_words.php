@@ -2,7 +2,7 @@
 // this function and the if statment below cover the_excerpt()
 function wpse_allowedtags() {
 // Add custom tags to this string
-    return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>,<code>,<pre>,<blockquote>';
+    return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>,<h3>,<code>,<pre>,<blockquote>';
 }
 
 if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
@@ -19,7 +19,7 @@ if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
             $wpse_excerpt = strip_tags($wpse_excerpt, wpse_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
 
             //Set the excerpt word count and only break after sentence is complete.
-                $excerpt_word_count = 30;
+                $excerpt_word_count = 50;
                 $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
                 $tokens = array();
                 $excerptOutput = '';

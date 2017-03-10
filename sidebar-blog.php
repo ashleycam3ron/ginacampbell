@@ -1,4 +1,4 @@
-<div id="sidebar" class="col-md-3 col-md-offset-1">
+<div id="sidebar" class="col-md-3">
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Blog Sidebar')) :
 	    else : ?>
 
