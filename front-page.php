@@ -8,7 +8,7 @@
 		<div class="container">
 			<?php $profile = get_field('profile');
 			  if( !empty($profile) ): ?>
-			  <div class="col-xs-6 col-md-3">
+			  <div class="col-xs-6 col-sm-4 col-md-3">
 				<img class="img-responsive img-circle profile" src="<?php echo $profile['url']; ?>" alt="<?php echo $profile['alt']; ?>" />
 			  </div>
 			<?php endif; ?>
@@ -27,19 +27,19 @@
     </section>
 
     <section class="cta container text-center">
-	    <div class="col-md-4">
+	    <div class="col-sm-4 col-md-4">
 		    <img src="<? echo get_stylesheet_directory_uri(); ?>/images/icon-chair.png" alt="chair icon"/>
 		    <h3><?php the_field('headline1'); ?></h3>
 		    <p><?php the_field('col1'); ?></p>
 		    <p><a target="_blank" class="btn-default" href="<?php the_field('link1'); ?>"><?php the_field('btn1'); ?></a></p>
 		</div>
-		<div class="col-md-4">
+		<div class="col-sm-4 col-md-4">
 		    <img src="<? echo get_stylesheet_directory_uri(); ?>/images/icon-chat.png" alt="let's talk icon"/>
 		    <h3><?php the_field('headline2'); ?></h3>
 		    <p><?php the_field('col2'); ?></p>
 		    <p><a target="_blank" class="btn-default" href="<?php the_field('link2'); ?>"><?php the_field('btn2'); ?></a></p>
 		</div>
-		<div class="col-md-4">
+		<div class="col-sm-4 col-md-4">
 		    <img src="<? echo get_stylesheet_directory_uri(); ?>/images/icon-cal.png" alt="calendar icon"/>
 		    <h3><?php the_field('headline3'); ?></h3>
 		    <p><?php the_field('col3'); ?></p>

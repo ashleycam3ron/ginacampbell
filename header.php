@@ -27,7 +27,7 @@
 	<h3 class="hidden"><?php bloginfo('name')?> – <?php bloginfo('description');?></h3>
 
 <header id="header" role="banner" class="container">
-	<nav class="navbar navbar-default pull-right" role="navigation">
+	<nav class="navbar navbar-default" role="navigation">
 		<h2>Primary Navigation</h2>
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -35,7 +35,7 @@
             <span class="icon-bar middle-bar"></span>
             <span class="icon-bar bottom-bar"></span>
         </button>
-        <a class="portal hidden-xs" href="https://gina-campbell.clientsecure.me" target="_blank">Book Online</a>
+        <a class="portal hidden-xs hidden-sm" href="https://gina-campbell.clientsecure.me" target="_blank">Book Online</a>
 		<div id="navbar" class="navbar-collapse collapse navbar-ex1-collapse">
 		<?php wp_nav_menu( array(
 			  'menu' => 'primary',
@@ -51,4 +51,4 @@
 	</a>
 	<a class="phone pull-right" href="tel:5155124254">515.512.4254</a>
 </header>
-<a class="portal visible-xs" href="https://gina-campbell.clientsecure.me" target="_blank">Book Online</a>
+<a class="portal visible-xs visible-sm" href="https://gina-campbell.clientsecure.me" target="_blank">Book Online</a>

@@ -17,13 +17,13 @@
 
 		<article class="entry row">
 			<?php if ( is_home() && has_post_thumbnail() ) { ?>
-			  <div class="col-md-5 feature">
+			  <div class="col-sm-5 feature">
 			    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 			        <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
 			    </a>
 			    <div class="clear"></div>
 			  </div>
-			  <div class="col-md-7">
+			  <div class="col-sm-7">
 				<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a></h1>
 				<time><?php the_time('l, F j'); ?></time>
 				<?php the_excerpt();?>
